@@ -7,10 +7,15 @@
 # * * *
 # * * * *
 
-n = 4
-for i in 1..n+1
-	for j in 1..i
-		print '*'
+def triangle(n)
+	for i in 1..n+1
+		for j in 1..i
+			print '*'
+		end
+		puts ''
 	end
-	puts ''
 end
+
+
+print "Answer : \n"
+p triangle(ARGV[0].to_i)

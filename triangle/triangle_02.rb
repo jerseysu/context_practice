@@ -8,13 +8,17 @@
 #   ***
 #    *
 
-n = 4
-n.downto(1) do |i|
-	1.upto(n - i) do |j|
-		print ' '
+def triangle(n)
+	n.downto(1) do |i|
+		1.upto(n - i) do |j|
+			print ' '
+		end
+		1.upto(2 * i - 1) do |j|
+			print '*'
+		end
+		puts ''
 	end
-	1.upto(2 * i - 1) do |j|
-		print '*'
-	end
-	puts ''
 end
+
+print "Answer : \n"
+p triangle(ARGV[0].to_i)
